@@ -5,12 +5,12 @@ class Parcel
   STANDARD_COST = 5
 
   define_method(:initialize) do |width, height, depth, weight, service, distance|
-    @width = width
-    @height = height
-    @depth = depth
-    @weight = weight
+    @width = width.to_f
+    @height = height.to_f
+    @depth = depth.to_f
+    @weight = weight.to_f
     @service = service
-    @distance = distance
+    @distance = distance.to_f
   end
 
   define_method(:volume) do
@@ -25,5 +25,7 @@ class Parcel
     cost += 5 if @service.downcase().==('expedited')
     cost += 15 if @service.downcase().==('overnight')
     cost += ((@distance.-(STANDARD_DISTANCE)).*(0.01)) if @distance.>(STANDARD_DISTANCE)
+
+    cost
   end
 end
