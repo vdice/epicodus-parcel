@@ -1,37 +1,36 @@
-<h1>Cost to Ship!</h1>
-  <form action="/parcel">
-    <div class="form-group">
-      <label for="width">Width</label>
-      <input id="width" name="width" type="number" placeholder="Width" autofocus="autofocus" required>
-    </div>
-    <div class="form-group">
-      <label for="height">Height</label>
-      <input id="height" name="height" type="number" placeholder="height" required>
-    </div>
-    <div class="form-group">
-      <label for="depth">Depth</label>
-      <input id="depth" name="depth" type="number" placeholder="depth" required>
-    </div>
-    <div class="form-group">
-      <label for="weight">Weight</label>
-      <input id="weight" name="weight" type="number" placeholder="weight" required>
-    </div>
-    <div class="form-group">
-      <label for="service">Service</label>
-      <input list="service_list" name="service" id="service">
-      <datalist id="service_list">
-        <option value="Standard">
-        <option value="Expedited">
-        <option value="Overnight">
-      </datalist>
-    </div>
-    <div class="form-group">
-      <label for="distance">Distance</label>
-      <input id="distance" name="distance" type="number" placeholder="distance" required>
-    </div>
-    <div class="form-group">
-      <label for="gift_wrap">Gift Wrap?</label>
-      <input id="gift_wrap" name="gift_wrap" type="checkbox">
-    </div>
-    <button type="submit" class="btn-success">Submit</button>
-  </form>
+<form action="/parcel">
+  <div class="form-group">
+    <label for="width">Width</label>
+    <input id="width" name="width" type="number" placeholder="Width" autofocus="autofocus" required>
+  </div>
+  <div class="form-group">
+    <label for="height">Height</label>
+    <input id="height" name="height" type="number" placeholder="height" required>
+  </div>
+  <div class="form-group">
+    <label for="depth">Depth</label>
+    <input id="depth" name="depth" type="number" placeholder="depth" required>
+  </div>
+  <div class="form-group">
+    <label for="weight">Weight</label>
+    <input id="weight" name="weight" type="number" placeholder="weight" required>
+  </div>
+  <div class="form-group">
+    <label for="service">Service</label>
+    <input list="service_list" name="service" id="service" value="Standard">
+    <datalist id="service_list">
+      <option value="Standard">
+      <option value="Expedited">
+      <option value="Overnight">
+    </datalist>
+  </div>
+  <div class="form-group">
+    <label for="distance">Distance</label>
+    <input id="distance" name="distance" type="number" placeholder="distance" required>
+  </div>
+  <div class="form-group">
+    <label for="gift_wrap">Gift Wrap?</label>
+    <input id="gift_wrap" name="gift_wrap" type="checkbox">
+  </div>
+  <button type="submit" class="btn-success">Submit</button>
+</form>

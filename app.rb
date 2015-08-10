@@ -15,7 +15,9 @@ get('/parcel') do
   @weight = params.fetch('weight')
   @service = params.fetch('service')
   @distance = params.fetch('distance')
-  @gift_wrap = params.fetch('gift_wrap')
+  if params.has_key?('gift_wrap')
+    @gift_wrap = params.fetch('gift_wrap')
+  end
 
   @parcel = Parcel.new(@width, @height, @depth, @weight, @service, @distance, @gift_wrap)
   @cost_to_ship = @parcel.cost_to_ship()
