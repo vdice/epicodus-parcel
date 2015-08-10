@@ -12,7 +12,8 @@ describe('the parcel path', {:type => :feature}) do
     fill_in('Weight', :with => 5)
     fill_in('Service', :with => 'Expedited')
     fill_in('Distance', :with => 3000)
+    check 'gift_wrap'
     click_button('Submit')
-    expect(page).to have_content('The cost to ship your package is: $37.50')
+    expect(page).to have_content('The cost to ship your package is: $37.80')
   end
 end
